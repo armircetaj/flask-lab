@@ -28,27 +28,29 @@ Poi apri il file `.env` e cambia i valori:
 
 Il database è un file SQLite che si crea con le migrations:
 
-    flask --app app db upgrade
+    flask db upgrade
 
 Il file si trova nella cartella `instance/`.
 
 Se si cambia `models.py`, bisogna creare una nuova migration:
 
-    flask --app app db migrate
-    flask --app app db upgrade
+    flask db migrate
+    flask db upgrade
 
 ## Creare un admin
 
 Al signup viene sempre creato un utente normale, invece per creare un admin si usa un comando scritto in `app.py`.
 All'esecuzione del comando chiede due parametri, cioe' nome e password
 
-    flask --app app create-admin admin miapassword
+    flask create-admin USERNAME PASSWORD
 
 Il comando crea un utente con il ruolo `admin` e lo salva nel database.
 
 ## Avviare l'app
 
-    python app.py
+    python -m app
+Oppure
+    flask run
 
 ## Test
 

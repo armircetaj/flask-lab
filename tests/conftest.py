@@ -34,7 +34,7 @@ def make_client(app, make_user):
 
 @pytest.fixture
 def make_book(app):
-    def _make_book(username, title='Dune', author='Frank Herbert', **kwargs):
+    def _make_book(username, title='Libro Bello', author='Autore Bello', **kwargs):
         with app.app_context():
             user = User.query.filter_by(username=username).first()
             book = Book(title=title, author=author, user_id=user.id, **kwargs)
