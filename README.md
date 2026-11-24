@@ -37,7 +37,7 @@ Se si cambia `models.py`, bisogna creare una nuova migration:
     flask db migrate
     flask db upgrade
 
-## Creare un admin
+## Creazione di un admin
 
 Al signup viene sempre creato un utente normale, invece per creare un admin si usa un comando scritto in `app.py`.
 All'esecuzione del comando chiede due parametri, cioe' nome e password
@@ -46,7 +46,7 @@ All'esecuzione del comando chiede due parametri, cioe' nome e password
 
 Il comando crea un utente con il ruolo `admin` e lo salva nel database.
 
-## Avviare l'app
+## Come avviare l'app
 
     python -m app
 Oppure
